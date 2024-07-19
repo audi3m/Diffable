@@ -9,22 +9,30 @@
 /* Begin PBXBuildFile section */
 		D48050872C4A02B300FD5FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48050862C4A02B300FD5FFC /* AppDelegate.swift */; };
 		D48050892C4A02B300FD5FFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48050882C4A02B300FD5FFC /* SceneDelegate.swift */; };
-		D480508B2C4A02B300FD5FFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480508A2C4A02B300FD5FFC /* ViewController.swift */; };
+		D480508B2C4A02B300FD5FFC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480508A2C4A02B300FD5FFC /* SettingsViewController.swift */; };
 		D48050902C4A02B400FD5FFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D480508F2C4A02B400FD5FFC /* Assets.xcassets */; };
 		D48050932C4A02B400FD5FFC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D48050922C4A02B400FD5FFC /* Base */; };
 		D480509C2C4A030400FD5FFC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D480509B2C4A030400FD5FFC /* SnapKit */; };
-		D480509E2C4A033500FD5FFC /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480509D2C4A033500FD5FFC /* Enum.swift */; };
+		D480509E2C4A033500FD5FFC /* SettingsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480509D2C4A033500FD5FFC /* SettingsEnum.swift */; };
+		D48050A02C4A134000FD5FFC /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480509F2C4A134000FD5FFC /* Tab.swift */; };
+		D48050A22C4A142B00FD5FFC /* ChatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48050A12C4A142B00FD5FFC /* ChatList.swift */; };
+		D48050A42C4A150100FD5FFC /* ChatEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48050A32C4A150100FD5FFC /* ChatEnum.swift */; };
+		D48050A82C4A30CE00FD5FFC /* CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48050A72C4A30CE00FD5FFC /* CellConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D48050832C4A02B300FD5FFC /* Diffable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diffable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48050862C4A02B300FD5FFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D48050882C4A02B300FD5FFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D480508A2C4A02B300FD5FFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D480508A2C4A02B300FD5FFC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D480508F2C4A02B400FD5FFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D48050922C4A02B400FD5FFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48050942C4A02B400FD5FFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D480509D2C4A033500FD5FFC /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		D480509D2C4A033500FD5FFC /* SettingsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEnum.swift; sourceTree = "<group>"; };
+		D480509F2C4A134000FD5FFC /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		D48050A12C4A142B00FD5FFC /* ChatList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatList.swift; sourceTree = "<group>"; };
+		D48050A32C4A150100FD5FFC /* ChatEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEnum.swift; sourceTree = "<group>"; };
+		D48050A72C4A30CE00FD5FFC /* CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +68,33 @@
 			children = (
 				D48050862C4A02B300FD5FFC /* AppDelegate.swift */,
 				D48050882C4A02B300FD5FFC /* SceneDelegate.swift */,
-				D480508A2C4A02B300FD5FFC /* ViewController.swift */,
-				D480509D2C4A033500FD5FFC /* Enum.swift */,
+				D480509F2C4A134000FD5FFC /* Tab.swift */,
+				D48050A62C4A154100FD5FFC /* Settings */,
+				D48050A52C4A153F00FD5FFC /* New Group */,
 				D480508F2C4A02B400FD5FFC /* Assets.xcassets */,
 				D48050912C4A02B400FD5FFC /* LaunchScreen.storyboard */,
 				D48050942C4A02B400FD5FFC /* Info.plist */,
 			);
 			path = Diffable;
+			sourceTree = "<group>";
+		};
+		D48050A52C4A153F00FD5FFC /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				D48050A12C4A142B00FD5FFC /* ChatList.swift */,
+				D48050A72C4A30CE00FD5FFC /* CellConfiguration.swift */,
+				D48050A32C4A150100FD5FFC /* ChatEnum.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		D48050A62C4A154100FD5FFC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D480508A2C4A02B300FD5FFC /* SettingsViewController.swift */,
+				D480509D2C4A033500FD5FFC /* SettingsEnum.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D480508B2C4A02B300FD5FFC /* ViewController.swift in Sources */,
+				D480508B2C4A02B300FD5FFC /* SettingsViewController.swift in Sources */,
+				D48050A42C4A150100FD5FFC /* ChatEnum.swift in Sources */,
+				D48050A82C4A30CE00FD5FFC /* CellConfiguration.swift in Sources */,
+				D48050A22C4A142B00FD5FFC /* ChatList.swift in Sources */,
 				D48050872C4A02B300FD5FFC /* AppDelegate.swift in Sources */,
-				D480509E2C4A033500FD5FFC /* Enum.swift in Sources */,
+				D48050A02C4A134000FD5FFC /* Tab.swift in Sources */,
+				D480509E2C4A033500FD5FFC /* SettingsEnum.swift in Sources */,
 				D48050892C4A02B300FD5FFC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
