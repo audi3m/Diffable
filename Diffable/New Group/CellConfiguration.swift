@@ -8,23 +8,64 @@
 import UIKit
 import SnapKit
 
-final class CellConfiguration: UIView, UIContentView {
-    var configuration: UIContentConfiguration
-    init(_ configuration: UIContentConfiguration) {
-        self.configuration = configuration
-        super.init(frame:.zero)
+final class CellConfiguration: UICollectionViewCell {
+    static let reuseIdentifier = "FriendCell"
+    
+    private var profileImageView: UIImageView = {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFit
+        view.tintColor = .label
+        return view
+    }()
+    private var nameLabel: UILabel = {
+        let view = UILabel()
+        view.font = .systemFont(ofSize: 15)
+        return view
+    }()
+    private var lastChatLabel: UILabel = {
+        let view = UILabel()
+        view.font = .systemFont(ofSize: 13)
+        view.textColor = .secondaryLabel
+        view.numberOfLines = 2
+        return view
+    }()
+    lazy private var stackView: UIStackView = {
+        let view = UIStackView()
+        view.axis = .vertical
+        view.spacing = 5
+        view.alignment = .leading
+        view.addArrangedSubview(nameLabel)
+        view.addArrangedSubview(lastChatLabel)
+        return view
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        contentView.addSubview(profileImageView)
+        contentView.addSubview(stackView)
+        
+        profileImageView.snp.makeConstraints { make in
+            make.centerY.equalTo(contentView)
+            make.leading.equalTo(contentView).offset(20)
+            make.size.equalTo(70)
+        }
+        
+        stackView.snp.makeConstraints { make in
+            make.centerY.equalTo(contentView)
+            make.leading.equalTo(profileImageView.snp.trailing).offset(20)
+        }
+        
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
-
-
-struct MyContentConfiguration : UIContentConfiguration {
-    func makeContentView() -> UIView & UIContentView {
-        return CellConfiguration(self)
+    
+    func configure(with friend: Friend) {
+        profileImageView.image = UIImage(systemName: friend.image)
+        nameLabel.text = friend.name
+        lastChatLabel.text = friend.lastChat
     }
-    func updated(for state: UIConfigurationState) -> MyContentConfiguration {
-        return self
-    }
+    
 }

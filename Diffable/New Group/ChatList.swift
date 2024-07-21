@@ -32,18 +32,19 @@ final class ChatList: UIViewController {
     }
     
     private func configDataSource() {
-        var registration: UICollectionView.CellRegistration<UICollectionViewListCell, Friend>!
+        var registration: UICollectionView.CellRegistration<CellConfiguration, Friend>!
         registration = UICollectionView.CellRegistration { cell, indexPath, item in
-//            var config = UIListContentConfiguration.makeContentView(MyContentConfiguration)
-            let config = self.configContent(item: item)
-            cell.contentConfiguration = config
+            cell.configure(with: item)
+            
+            
+//            let config = self.configContent(item: item)
+//            cell.contentConfiguration = config
         }
         
         dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
             let cell = collectionView.dequeueConfiguredReusableCell(using: registration, for: indexPath, item: item)
             return cell
         })
-        
     }
     
     private func configContent(item: Friend) -> UIListContentConfiguration {
