@@ -32,7 +32,7 @@ final class CellConfiguration: UICollectionViewCell {
     lazy private var stackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
-        view.spacing = 5
+        view.spacing = 10
         view.alignment = .leading
         view.addArrangedSubview(nameLabel)
         view.addArrangedSubview(lastChatLabel)
@@ -46,6 +46,7 @@ final class CellConfiguration: UICollectionViewCell {
         contentView.addSubview(stackView)
         
         profileImageView.snp.makeConstraints { make in
+            make.verticalEdges.equalToSuperview().inset(10)
             make.centerY.equalTo(contentView)
             make.leading.equalTo(contentView).offset(20)
             make.size.equalTo(70)
@@ -54,6 +55,7 @@ final class CellConfiguration: UICollectionViewCell {
         stackView.snp.makeConstraints { make in
             make.centerY.equalTo(contentView)
             make.leading.equalTo(profileImageView.snp.trailing).offset(20)
+            make.trailing.equalTo(contentView).offset(-20)
         }
         
     }

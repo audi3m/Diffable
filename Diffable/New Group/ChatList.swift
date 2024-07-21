@@ -36,7 +36,6 @@ final class ChatList: UIViewController {
         registration = UICollectionView.CellRegistration { cell, indexPath, item in
             cell.configure(with: item)
             
-            
 //            let config = self.configContent(item: item)
 //            cell.contentConfiguration = config
         }
